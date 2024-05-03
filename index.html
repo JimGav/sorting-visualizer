@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Sorting visualizer</title>
+</head>
+
+<body style="padding:100px">
+
+  <div className="settings">
+    <div style="font-size:15px; display: flex;justify-content: center; gap:10px;align-items: center;">
+      <label>SPEED:</label><input id="speed" placeholder='Speed' value="1"></input>
+    </div>
+  </div>
+
+  <div className='sort-methods'>
+    <button id="bubble">Bubble Sort</button>
+    <button id="selection">Selection Sort</button>
+    <button id="merge">Merge Sort</button>
+    <button id="quick">Quick Sort</button>
+  </div>
+
+  <div style="border-radius:5px; padding: 5%  5% 0 5% ; margin-top: 5%; border: 1px solid #1d7484;">
+    <div id='array'></div>
+    <button id="regenerate">Regenerate Array</button>
+    <div class="results" style="font-size:15px;display: grid; justify-content: center; margin-top: 20px;">
+      <div style="display: flex; justify-content: center; gap: 10px;"><label>EXECUTION TIME: </label>
+        <p id="execution_time">0</p>
+        <p>ms</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="analysis">
+    <h1>Analysis</h1></br>
+    <ul style="display: grid;justify-content: center; grid-template-columns: 100% 100%;column-gap: 15%;row-gap: 15%;">
+      <div class="analysis-block">
+        <b style="color:#982c61"> Bubble Sort: </b>
+        <p>
+          Bubble sort is a straightforward sorting algorithm that repeatedly steps through the list, compares adjacent
+          elements, and swaps them if they are in the wrong order. The pass through the list is repeated until the list
+          is sorted. It's named for the way smaller elements "bubble" to the top of the list with each iteration. Though
+          simple to understand and implement, bubble sort is inefficient for large lists due to its quadratic time
+          complexity, making it impractical for real-world applications. Despite its inefficiency, bubble sort serves as
+          a fundamental introduction to sorting algorithms and is often used in educational contexts to illustrate basic
+          sorting concepts.
+        </p>
+      </div>
+      <div class="analysis-block">
+        <b style="color:#982c61">Selection Sort:</b>
+        <p>
+          Selection sort is a simple and intuitive sorting algorithm that iterates through an array, repeatedly
+          selecting the smallest element from the unsorted portion and swapping it with the element at the current
+          position. This process effectively partitions the array into a sorted section at the beginning and an unsorted
+          section at the end. With each iteration, the sorted section grows larger while the unsorted section shrinks
+          until the entire array is sorted. Despite its simplicity, selection sort's time complexity remains quadratic,
+          making it less efficient than other sorting algorithms for larger datasets. However, its straightforward
+          implementation and intuitive nature make it a valuable educational tool for understanding sorting principles.
+        </p>
+      </div>
+      <div class="analysis-block">
+        <b style="color:#982c61">Merge Sort:</b>
+        <p>
+          Merge sort is a divide-and-conquer sorting algorithm that divides the input array into smaller subarrays until
+          each subarray contains only one element. It then merges adjacent subarrays in a sorted order, continuously
+          combining them until a single sorted array is formed. The key operation of merge sort is the merging step,
+          where two sorted subarrays are merged into a single sorted subarray. This process is repeated recursively
+          until the entire array is sorted. Merge sort has a time complexity of O(n log n) in the worst-case scenario,
+          making it efficient for sorting large datasets. Additionally, it is stable and can be implemented both
+          iteratively and recursively. While merge sort requires additional space for the merging process, its
+          predictable performance and stability make it a popular choice for sorting applications.
+        </p>
+      </div>
+      <div class="analysis-block">
+        <b style="color:#982c61">Quick Sort:</b>
+        <p>Quick sort is a highly efficient sorting algorithm based on the divide-and-conquer strategy. It works by
+          selecting a 'pivot' element from the array and partitioning the other elements into two subarrays according to
+          whether they are less than or greater than the pivot. The process is then applied recursively to the
+          subarrays. Unlike merge sort, quick sort does not require additional storage for merging, making it
+          space-efficient.Quick sort typically has a time complexity of O(n log n) on average, although in the
+          worst-case scenario it can degrade to O(n^2). However, it is often faster in practice than other sorting
+          algorithms with similar average time complexities due to its efficient partitioning process.</p>
+      </div>
+    </ul>
+
+    <table>
+      <tr>
+        <th>Algorithm</th>
+        <th>Time Complexity (Worst-case)</th>
+        <th>Time Complexity (Average-case)</th>
+        <th>Time Complexity (Best-case)</th>
+      </tr>
+      <tr>
+        <td>Bubble Sort</td>
+        <td>O(n^2)</td>
+        <td>O(n^2)</td>
+        <td>O(n)</td>
+      </tr>
+      <tr>
+        <td>Selection Sort</td>
+        <td>O(n^2)</td>
+        <td>O(n^2)</td>
+        <td>O(n^2)</td>
+      </tr>
+      <tr>
+        <td>Merge Sort</td>
+        <td>O(n log n)</td>
+        <td>O(n log n)</td>
+        <td>O(n log n)</td>
+      </tr>
+      <tr>
+        <td>Quick Sort</td>
+        <td>O(n^2)</td>
+        <td>O(n log n)</td>
+        <td>O(n log n)</td>
+      </tr>
+    </table>
+  </div>
+  </div>
+
+
+
+  <script src="main.js"></script>
+</body>
+
+</html>
