@@ -13,17 +13,25 @@ html {
 body {
   font-size: 1.8rem;
   line-height: 1.618;
-  max-width: 100px;
-  margin: auto;
   color: aliceblue;
   background-color: #242424;
-  padding: 13px;
+  margin: 0;
+}
 
+.App{
   display: grid;
   justify-content: center;
   align-items: center;
   text-align: center;
 
+  width: 100%;
+  margin-bottom: 200px;
+}
+
+.main-container{
+  width: 50%;
+  justify-self: center;
+  margin-top: 5%;
 }
 
 @media (max-width: 684px) {
@@ -63,139 +71,7 @@ h2 {
   font-size: 2em;
 }
 
-h3 {
-  font-size: 1.75em;
-}
 
-h4 {
-  font-size: 1.5em;
-}
-
-h5 {
-  font-size: 1.25em;
-}
-
-h6 {
-  font-size: 1em;
-}
-
-p {
-  margin-top: 0px;
-  margin-bottom: 2.5rem;
-}
-
-small,
-sub,
-sup {
-  font-size: 75%;
-}
-
-hr {
-  border-color: #1d7484;
-}
-
-a {
-  text-decoration: none;
-  color: #1d7484;
-}
-
-a:visited {
-  color: #144f5a;
-}
-
-a:hover {
-  color: #982c61;
-  border-bottom: 2px solid #4a4a4a;
-}
-
-ul {
-  padding-left: 1.4em;
-  margin-top: 0px;
-  margin-bottom: 2.5rem;
-}
-
-li {
-  margin-bottom: 0.4em;
-}
-
-blockquote {
-  margin-left: 0px;
-  margin-right: 0px;
-  padding-left: 1em;
-  padding-top: 0.8em;
-  padding-bottom: 0.8em;
-  padding-right: 0.8em;
-  border-left: 5px solid #1d7484;
-  margin-bottom: 2.5rem;
-  background-color: #f1f1f1;
-}
-
-blockquote p {
-  margin-bottom: 0;
-}
-
-img,
-video {
-  height: auto;
-  max-width: 100%;
-  margin-top: 0px;
-  margin-bottom: 2.5rem;
-}
-
-/* Pre and Code */
-pre {
-  background-color: #f1f1f1;
-  display: block;
-  padding: 1em;
-  overflow-x: auto;
-  margin-top: 0px;
-  margin-bottom: 2.5rem;
-  font-size: 0.9em;
-}
-
-code,
-kbd,
-samp {
-  font-size: 0.9em;
-  padding: 0 0.5em;
-  background-color: #f1f1f1;
-  white-space: pre-wrap;
-}
-
-pre>code {
-  padding: 0;
-  background-color: transparent;
-  white-space: pre;
-  font-size: 1em;
-}
-
-/* Tables */
-table {
-  text-align: justify;
-  width: 100%;
-  border-collapse: collapse;
-}
-
-td,
-th {
-  padding: 0.5em;
-  border-bottom: 1px solid #f1f1f1;
-}
-
-/* Buttons, forms and input */
-input,
-textarea {
-  border: 1px solid #4a4a4a;
-}
-
-input:focus,
-textarea:focus {
-  border: 1px solid #1d7484;
-}
-
-textarea {
-  width: 100%;
-}
 
 .button,
 button,
@@ -240,39 +116,6 @@ input[type="button"]:hover:enabled {
   outline: 0;
 }
 
-textarea,
-select,
-input {
-  color: #4a4a4a;
-  padding: 6px 10px;
-  /* The 6px vertically centers text on FF, ignored by Webkit */
-  margin-bottom: 10px;
-  background-color: #f1f1f1;
-  border: 1px solid #1d7484;
-  border-radius: 4px;
-  box-shadow: none;
-  box-sizing: border-box;
-}
-
-textarea:focus,
-select:focus,
-input:focus {
-  border: 1px solid #1d7484;
-  outline: 0;
-}
-
-input[type="checkbox"]:focus {
-  outline: 1px dotted #1d7484;
-}
-
-label,
-legend,
-fieldset {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-
 #array {
   display: flex;
 }
@@ -286,7 +129,9 @@ fieldset {
 
 .analysis {
   color: white;
-  margin-top: 20%;
+  margin-top: 10%;
+  width: 40%;
+  justify-self:center;
 }
 
 .analysis p {
@@ -320,4 +165,32 @@ th {
   border-radius: 5px;
   padding: 10px 5%;
   display: grid;
+}
+
+.analysis-block button{
+  border-radius: 5px;
+  height: 50px;
+  background-color:rgba(22, 22, 22, 1);
+  font-weight: 900;
+  width: 100%;
+  align-self: center;
+  justify-self: center;
+}
+
+.Footer button{
+  background-color: #232323;
+  border: 1px solid #982c61;
+  font-size: 20px;
+}
+
+.Footer{
+  font-size: 15px;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.header{
+  font-size: 40px;
 }
